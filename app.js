@@ -1,3 +1,4 @@
+"use strict";
 console.log("Let's get this party started!");
 
 let formValue;
@@ -5,7 +6,8 @@ $("#submit").on("click", getGiphyInfo);
 //$("#remove").on("click", removeGif)
 
 //gets form value to use axios.get on to search for gifs
-async function getGiphyInfo() {
+async function getGiphyInfo(evt) {
+    evt.preventDefault();
 console.log("I ran!")
     let q = $("#api-giphy").val();
     console.log(q);
