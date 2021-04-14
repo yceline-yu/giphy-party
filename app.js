@@ -13,7 +13,7 @@ async function getGiphyInfo(evt) {
     let response = await axios.get("http://api.giphy.com/v1/gifs/search", 
         { params: { q: q, api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym" } })
     console.log(response);
-    let firstGif = response.data.data[0].images.preview_gif.url
+    let firstGif = response.data.data[0].images.original.url
     console.log(firstGif);
     appendToSection(firstGif);
 }
